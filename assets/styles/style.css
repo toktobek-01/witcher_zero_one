@@ -1,0 +1,21 @@
+#news {
+height: 100vh;
+background: url(../images/news/bg-map.6.jpg);
+padding-top: 100px;
+padding-left: 100px; 
+}
+
+
+.boxes {
+    display: grid;
+    grid-template-columns: 304px 304px;
+    grid-column-gap: 5px; 
+
+.box {
+background: 
+display: flex;
+justify-items: center;
+align-items: flex-end;
+padding: 5px;
+    }
+}
