@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./js/main.js"></script>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./assets/styles/style.less">
   <title>Document</title>
 </head>
 
@@ -27,20 +27,24 @@
       </ul>
     </nav>
     <article>
-      <div id="overlay">
-        <div class="fixtl"></div>
-        <div class="fixtr"></div>
-        <div class="fixbl"></div>
-        <div class="fixbr"></div>
-        <div class="topleftline"></div>
-        <div class="toprightline"></div>
-        <div class="leftline"></div>
-        <div class="rightline"></div>
-        <div class="botleftline"></div>
-        <div class="botrightline"></div>
-        <div>
-          <a href="#" class="scrollDown"></a>
+      <div class="containerOf">
+        <div id="overlay" class="gold">
+          <div class="fixtl"></div>
+          <div class="fixtr"></div>
+          <div class="fixbl"></div>
+          <div class="fixbr"></div>
+          <div class="topleftline"></div>
+          <div class="toprightline"></div>
+          <div class="leftline" id="leftline"></div>
+          <div class="rightline"></div>
+          <div class="botleftline"></div>
+          <div class="botrightline"></div>
+          <div>
+            <a href="#" class="scrollDown"></a>
+          </div>
         </div>
+      </div>
+      <button onclick='but()'>qwertyuio</button>
       </div>
 
       <section id="main">
@@ -68,7 +72,17 @@
 
       </section>
       <section id="media">
-
+        <div class="alpa">
+          <div class="inner_wrapper">
+            <h2 class="mediaH2">MEDIA</h2>
+            <div class="line_between"></div>
+            <ul class="media_slide">
+              <li class="media_video">VIDEO</li>
+              <li class="media_wall">WALLPAPER</li>
+              <li class="media_screen">SCREANSHOTS</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </article>
   </main>
