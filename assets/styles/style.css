@@ -1,0 +1,16 @@
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+#professional_monster_hunter{
+    height: 1000;
+    background: url("../images/bg-monsterhunter.6.jpg") no-repeat;
+    background-size: cover;
+    .boxes{
+        display: grid;
+    }
+    }
