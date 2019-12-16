@@ -1,4 +1,60 @@
-body , html {
+@font-face {
+    font-family: PFDinTextCondPro;
+    src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: PFDinTextCondPro;
+    src: url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: PFDinTextCondPro;
+    src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(https://thewitcher.com/fonts/ProximaNovaBold.otf);
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: HalisGR-Light;
+    src: url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: HalisGR;
+    src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: HalisGR;
+    src: url(https://thewitcher.com/fonts/310E27_B_0.woff2) format("woff2"), url(https://thewitcher.com/fonts/310E27_B_0.woff) format("woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: HalisGR-Bold;
+    src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+
+body,
+html {
     margin: 0;
     padding: 0;
     background-image: url(https://thewitcher.com/gfx/witcher3/bg-story.6.jpg);
@@ -6,9 +62,11 @@ body , html {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 div {
     display: block;
 }
+
 .inner-wrapper h2 {
     font-size: 40px;
     text-transform: uppercase;
@@ -17,20 +75,23 @@ div {
     text-shadow: 1px 1px 15.52px #000;
 
 }
+
 h2 {
     display: block;
     font-size: 1.5em;
-     margin: 0;
+    margin: 0;
     font-weight: 400;
 }
+
 .title {
     font-size: 40px;
     margin-bottom: 10px;
     color: whitesmoke;
 }
- .inner-list {
-     list-style: none;
-     -webkit-column-count: 2;
+
+.inner-list {
+    list-style: none;
+    -webkit-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 10px;
     column-gap: 15px;
@@ -39,6 +100,7 @@ h2 {
     list-style: none;
 
 }
+
 .inner-list li {
     position: relative;
     margin-bottom: 5px;
@@ -49,7 +111,7 @@ h2 {
     width: 619px;
     height: 450px;
     margin-top: 150px;
-    background:transparent;
+    background: transparent;
     margin-left: 160px;
 
 }
@@ -80,9 +142,12 @@ span {
     margin-top: 8px;
 }
 
-
-
-
-
-
-
+.inner-list li a {
+    background-image: url(https://thewitcher.com/img/sprite-w3-buttons-8f4a86f6ed.6.png);
+    background-position: 0 -1511px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
