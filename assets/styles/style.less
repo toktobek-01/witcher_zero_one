@@ -1,7 +1,114 @@
-body, h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
+}
+
+#news {
+  background: url(../images/news/bg-news.6.jpg) no-repeat;
+  display: grid;
+  height: 100vh;
+  background-size: cover;
+
+  .container {
+    text-align: center;
+    color: white;
+    padding-top: 150px;
+    font: 30px PFDinTextCondPro, Arial, sans-serif;
+    height: 100vh;
+
+    h2 {
+      font: 40px PFDinTextCondPro, Arial, sans-serif;
+      font-weight: 400;
+      font-family: PFDinTextCondPro;
+    }
+  }
+
+  .boxes {
+    display: grid;
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    font: 15px PFDinTextCondPro, Arial, sans-serif;
+    grid-template-columns: 312px 312px 312px;
+    justify-content: center;
+    height: 256px;
+    grid-column-gap: 10px;
+    width: 100%;
+
+    .box {
+      display: inline-block;
+      text-align: center;
+      background: 312px 256px;
+      background-color: rgb(145, 146, 146);
+      padding: 8px;
+
+      img {
+        border: 1px solid black;
+      }
+
+      h2 {
+        color: black;
+        font: 20px PFDinTextCondPro, Arial, sans-serif;
+        text-align: left;
+        height: 3em;
+      }
+
+      h3 {
+        color: black;
+        font: 15px PFDinTextCondPro, Arial, sans-serif;
+        text-align: left;
+        color: #777;
+      }
+    }
+  }
+
+  #world_map {
+    background: url(..//images/news/bg-map.6.jpg) no-repeat;
+    display: grid;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+  }
+  .btn-view {
+    padding-left: 177px;
+    padding-bottom: 155px;
+  }
+
+  .world_map {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 360px;
+    color: white;
+    font: 30px PFDinTextCondPro, Arial, sans-serif;
+
+    //.btn {
+    //    display: block;
+    //    background-position: 0 -168px;
+    //    width: 263px;
+    //    height: 91px;
+    //    margin: 0 auto;
+    //    width: 263px;
+    //    height: 91px;
+    //    background-color: transparent;
+    //
+    //    img {
+    //        justify-content: center;
+    //}
+    //
+    //
+    //}
+  }
 }
