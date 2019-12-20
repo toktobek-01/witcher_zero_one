@@ -5,109 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./js/main.js"></script>
-  <link rel="stylesheet" href="./assets/styles/style.less">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.10.3/less.min.js"></script>
+  <link rel="stylesheet/less" type="text/css" href="./assets/styles/style.less">
   <title>Document</title>
 </head>
 
 <body>
-  <!-- 
-  <main>
-    <nav id="menu">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav> -->
-  <article>
-    <div class="containerOf">
-      <div id="overlay" class="gold">
-        <div id="fixtl"></div>
-        <div id="fixtr"></div>
-        <div id="fixbl"></div>
-        <div id="fixbr"></div>
-        <div id="topleftline"></div>
-        <div id="toprightline"></div>
-        <div id="leftline"></div>
-        <div id="rightline"></div>
-        <div id="botleftline"></div>
-        <div id="botrightline"></div>
-        <div>
-          <a href="#" id="scrollDown"></a>
-        </div>
-
-      </div>
+  
+  <div id="overlay" class="goldLine">
+    <div class="angles" id="topLeft"></div>
+    <div class="angles" id="topRight"></div>
+    <div class="angles" id="bottomLeft"></div>
+    <div class="angles" id="bottomRight"></div>
+    <div class="lines" id="topLeftLine"></div>
+    <div class="lines" id="topRightLine"></div>
+    <div class="lines" id="leftLine"></div>
+    <div class="lines" id="rightLine"></div>
+    <div class="lines" id="bottomLeftLine"></div>
+    <div class="lines" id="bottomRightLine"></div>
+    <div id="logo"><img id="logoIMG" src="" alt=""></div>
+    <div id="bottomAlso">
+      <div id="mainAlso"><p id="mainBottomAlso">Also available on PC, PS4 and Xbox One</p></div>
     </div>
-    <button onclick="scrol()">hover</button>
+    <div id="sliderButton">
+      <img id="SliderDown" onclick="scrollDown()" src="assets/images/Islam/scrdwn.png" alt="">
     </div>
+  </div>
 
-    <section id="main">
+  <article id="section-holder" onscroll="onScroll()">
 
-    </section>
-    <section id="nintendo">
-
-    </section>
-    <section id="open_world">
-
-    </section>
-    <section id="monster_hunter">
-
-    </section>
-    <section id="story">
-
-    </section>
-    <section id="buy_the_game">
-
-    </section>
-    <section id="news">
-
-    </section>
-    <section id="world_map">
-
-    </section>
-    <section id="media">
-      <div class="alpa">
-        <div class="inner_wrapper">
-          <h2 class="mediaH2">MEDIA</h2>
-          <div class="line_between"></div>
-          <ul class="media_slide">
-            <li id="media_video" onmouseover="onmousVid()"><button id="slidebut" onclick="toVid()">VIDEO</button></li>
-            <li id="media_wall" onmouseover="onmousWall()"><button id="slidebut" onclick="toWall()">WALLPAPER</button></li>
-            <li id="media_screen" onmouseover="onmousScr()"><button id="slidebut" onclick="toScr()">SCREENSHOTS</button></li>
-          </ul>
-          <div id="swiperMedia">
-            <div id="ciontHidd">
-              <div id="videoSlide">
-                <div id="cont"><div id="inVid"><img id="slideImg" src="/assets/images/Islam/witcher img/mqdefault.jpg" alt=""><span id="spanes">Witcher 3: Wild Hunt - Blood and Wine teaser trailer</span></div></div>
-                <div id="cont"><div id="inVid"><img id="slideImg" src="/assets/images/Islam/witcher img/mqdefault (1).jpg" alt=""><span id="spanes">Witcher 3: Wild Hunt - Blood and Wine teaser trailer</span></div></div>
-                <div id="cont"><div id="inVid"><img id="slideImg" src="/assets/images/Islam/witcher img/mqdefault (2).jpg" alt=""><span id="spanes">Witcher 3: Wild Hunt - Blood and Wine teaser trailer</span></div></div>
-              </div>
-              <div id="wallpaperSlide">
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/thewitcher.com_en_1920x1080_59ad4d49d63f7.jpg" alt=""></div>
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/thewitcher.com_en_1920x1080_57bef752023cb.jpg" alt=""></div>
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/979x551-EN-EP2_wallpaper.jpg" alt=""></div>
-              </div>
-              <div id="screenSlide">
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/thewitcher.com_en_1920x1080_5798940404b39.jpg" alt=""></div>
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/thewitcher.com_en_1920x1080_579893d6d9605.jpg" alt=""></div>
-                <div id="cont"><div id="inVid"></div><img id="slideImg" src="/assets/images/Islam/witcher img/thewitcher.com_en_1920x1080_5798936a42647.jpg" alt=""></div>
-              </div>
-            </div>
+    <section class="section" style="top: 0" id="main"></section>
+    <section class="section" id="nintendo"></section>
+    <section class="section" id="open_world"></section>
+    <section class="section" id="monster_hunter"></section>
+    <section class="section" id="story"></section>
+    <section class="section" id="buy_the_game"></section>
+    <section class="section" id="news"></section>
+    <section class="section" id="world_map"></section>
+    <section class="section" id="media">
+      <div class="moreBg">
+        <h2 id="headlineMedia">MEDIA</h2>
+        <div id="divider"></div>
+        <ul id="sliderMedia">
+          <li onclick="mediaSlide('video')" class="Buttons" id="videoButton">VIDEOS</li>
+          <li onclick="mediaSlide('wallpaper')" class="Buttons" id="wallpaperButton">WALLPAPERS</li>
+          <li onclick="mediaSlide('screenshote')" class="Buttons" id="screenshotButton">SCREENSHOTS</li>
+        </ul>
+        <div id="hiddenSlide">
+          <div id="slide">
+            <ul class="imagesCont">
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="firstVideoIMG" src="/assets/images/Islam/explansion.jpg" alt="">
+                <span id="mediaSlideText">Witcher 3: Wild Hunt - Blood and Wine teaser trailer</span></li>
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="secondVideoIMG" src="/assets/images/Islam/starik.jpg" alt="">
+                <span id="mediaSlideText">The Witcher 3: Wild Hunt - Hearts of Stone (Expansion Trailer)</span></li>
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="thirdVideoIMG" src="/assets/images/Islam/gage.jpg" alt="">
+                <span id="mediaSlideText">The Witcher 3: Wild Hunt - RAGE &amp; STEEL</span></li>
+            </ul>
+            <ul class="imagesCont">
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="firstWallpaperIMG" src="assets/images/Islam/wallpaper1.jpg" alt=""></li>
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="secondWallpaperIMG" src="assets/images/Islam/wallpaper2.jpg" alt=""></li>
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="thirdWallpaperIMG" src="assets/images/Islam/wallpaper3.jpg" alt=""></li>
+            </ul>
+            <ul class="imagesCont">
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="firstScreenshoteIMG" src="assets/images/Islam/screenshote1.jpg" alt=""></li>
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="secondScreenshoteIMG" src="assets/images/Islam/screenshote2.jpg" alt=""></li>
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="thirdScreenshoteIMG" src="assets/images/Islam/screenshote3.jpg" alt=""></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
   </article>
-  </main>
-
 </body>
 
 </html>

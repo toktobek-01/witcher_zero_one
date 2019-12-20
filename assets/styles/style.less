@@ -1,284 +1,369 @@
-/* ISLAM--- Overlay start */
-* {
-  outline: 0;
-}
-
 body {
   margin: 0;
-  color: #fff;
-  font-weight: 400;
-  font-family:'PFDinTextCondPro-Regular';
+  font-family: 'PFDinTextCondPro-Regular', Arial sans-serif;
+
+  #overlay {
+    position: fixed;
+    z-index: 1;
+
+    .angles {
+      height: 54px;
+      width: 54px;
+      z-index: 1;
+    }
+
+    #topLeftLine {
+      height: 1px;
+      position: fixed;
+      top: 40px;
+      left: 70px;
+      width: calc(50% - 70px);
+      z-index: 1;
+    }
+
+    #topRightLine {
+      height: 1px;
+      position: fixed;
+      top: 40px;
+      width: calc(50% - 70px);
+      right: 70px;
+    }
+
+    #bottomRightLine {
+      height: 1px;
+      position: fixed;
+      bottom: 40px;
+      right: 70px;
+      width: calc(50% - 70px);
+    }
+
+    #bottomLeftLine {
+      height: 1px;
+      position: fixed;
+      bottom: 40px;
+      left: 70px;
+      width: calc(50% - 70px);
+    }
+
+    #leftLine {
+      position: fixed;
+      width: 1px;
+      left: 40px;
+      top: 70px;
+      height: calc(100% - 140px);
+    }
+
+    #rightLine {
+      position: fixed;
+      width: 1px;
+      right: 40px;
+      top: 70px;
+      height: calc(100% - 140px);
+    }
+
+    #sliderButton {
+      position: fixed;
+      width: 1px;
+      bottom: 6px;
+      left: calc(50% - 1px);
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .goldLine {
+    .lines {
+      background-color: #b19042;
+      opacity: .35;
+      z-index: 1;
+    }
+  }
+
+  .silverLine {
+    .lines {
+      background-color: #b3bac0;
+      opacity: .35;
+      z-index: 1;
+    }
+  }
+
+  .silverLine {
+    #topLeft {
+      background: url(/assets/images/Islam/11.png);
+      position: fixed;
+      top: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #topRight {
+      background: url(/assets/images/Islam/12.png);
+      position: fixed;
+      top: 13px;
+      right: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #bottomLeft {
+      background: url(/assets/images/Islam/13.png);
+      position: fixed;
+      bottom: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #bottomRight {
+      background: url(/assets/images/Islam/14.png);
+      position: fixed;
+      bottom: 13px;
+      right: 13px;
+      margin: 0;
+    }
+  }
+
+  .goldLine {
+    #topLeft {
+      background: url(/assets/images/Islam/top-left.6.png);
+      position: fixed;
+      top: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .goldLine {
+    #topRight {
+      background: url(/assets/images/Islam/top-right.6.png);
+      position: fixed;
+      top: 13px;
+      right: 13px;
+    }
+  }
+
+  .goldLine {
+    #bottomLeft {
+      background: url(/assets/images/Islam/bottom-left.6.png);
+      position: fixed;
+      bottom: 13px;
+      left: 13px;
+    }
+  }
+
+  .goldLine {
+    #bottomRight {
+      background: url(/assets/images/Islam/bottom-right.6.png);
+      position: fixed;
+      bottom: 13px;
+      right: 13px;
+      z-index: 1;
+    }
+  }
+  #logo {
+    width: 1px;
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #logoIMG {
+    width: 200px;
+    display: none;
+  }
+
+  #bottomAlso {
+    position: fixed;
+    bottom: 22px;
+    left: calc(50% - 180px);
+    height: 36px;
+    width: 360px;
+    z-index: 1;
+    background-color: #b19042;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+    cursor: none;
+
+    #mainAlso {
+      width: 357px;
+      height: 34px;
+      position: fixed;
+      bottom: 23px;
+      left: calc(50% - 178px);
+      background-color: #2f2f2f;
+      clip-path: polygon(6.5% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #mainBottomAlso {
+        color: #dab145;
+        font-family: 'HalisGR', sans-serif;
+      }
+    }
+  }
 }
 
+//
+// Media started
+//
 
-.containerOf {
-  background: url(/assets/images/Islam/bg-desktop-toussaint.6.jpg);
-  background-size: cover;
+#section-holder {
   height: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
-}
-
-#overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  z-index: 4;
-}
-
-#fixtl {
-  background: url(/assets/images/Islam/corner-top-left.6.png);
-  position: absolute;
-  top: 13px;
-  left: 13px;
-  height: 54px;
-  width: 54px;
-}
-
-
-
-#fixtr {
-  background: url(/assets/images/Islam/corner-top-right.6.png);
-  position: absolute;
-  top: 13px;
-  right: 13px;
-  height: 54px;
-  width: 54px;
-}
-
-
-#fixbl {
-  background: url(/assets/images/Islam/corner-bottom-left.6.png);
-  position: absolute;
-  bottom: 13px;
-  left: 13px;
-  height: 54px;
-  width: 54px;
-}
-
-#fixbr {
-  background: url(/assets/images/Islam/corner-bottom-right.6.png);
-  position: absolute;
-  bottom: 13px;
-  right: 13px;
-  height: 54px;
-  width: 54px;
-}
-
-#topleftline {
-  background-color: #b19042;
-  height: 1px;
-  opacity: .35;
-  position: absolute;
-  height: 1px;
-  top: 40px;
-  left: 70px;
-  right: 50%;
-}
-
-
-
-#toprightline {
-  background-color: #b19042;
-  opacity: .35;
-  height: 1px;
-  position: absolute;
-  height: 1px;
-  top: 40px;
-  right: 70px;
-  left: 50%;
-}
-
-#leftline {
-  position: absolute;
-  width: 1px;
-  background-color: #b19042;
-  opacity: .35;
-  left: 40px;
-  top: 70px;
-  bottom: 70px;
-}
-
-#rightline {
-  position: absolute;
-  width: 1px;
-  background-color: #b19042;
-  opacity: .35;
-  right: 40px;
-  top: 70px;
-  bottom: 70px;
-}
-
-#botrightline {
-  background-color: #b19042;
-  height: 1px;
-  opacity: .35;
-  position: absolute;
-  height: 1px;
-  bottom: 40px;
-  right: 70px;
-  left: 50%;
-}
-
-#botleftline {
-  background-color: #b19042;
-  height: 1px;
-  opacity: .35;
-  position: absolute;
-  height: 1px;
-  bottom: 40px;
-  left: 70px;
-  right: 50%;
-}
-
-#scrollDown {
-  background: url(/assets/images/Islam/scrollDown.png);
-  width: 10px;
-  height: 27px;
-  position: absolute;
-  bottom: -1.7px;
-  left: 49.5%;
-  transform: rotate(-90deg);
-  z-index: 5;
-  border: none;
-}
-
-/* Overlay end */
-
-#media {
-  background: url(/assets/images/Islam/bg-media.6.jpg);
-  background-size: cover;
-  height: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
-}
-
-.alpa {
-  background: url(/assets/images/Islam/apla-media.6.png);
-  height: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
-}
-
-.mediaH2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  margin: 0;
-}
-
-.line_between {
-  background: url(/assets/images/Islam/sprite-w3-buttons-8f4a86f6ed.6.png);
-  background-position-x: 50%;
-  height: 12px;
-  margin-top: 8px;
-  background-repeat: no-repeat;
-}
-
-.inner_wrapper {
-  position: relative;
-  top: 122px;
-  text-align: center;
-}
-
-.media_slide {
-  cursor: pointer;
-  display: block;
-  padding: 0 7px;
-  font-size: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 40px;
-  text-align: center;
-}
-
-#media_video {
-  background: url(/assets/images/Islam/media\ button.png);
-  background-repeat: no-repeat;
-  width: 166px;
-  height: 40px;
-  display: inline-block;
-}
-
-#media_wall {
-  background: url(/assets/images/Islam/sprite-w3-buttons-8f4a86f6ed.6\ —\ копия.png);
-  background-repeat: no-repeat;
-  width: 166px;
-  height: 40px;
-  display: inline-block;
-}
-
-#media_screen {
-  background: url(/assets/images/Islam/sprite-w3-buttons-8f4a86f6ed.6\ —\ копия.png);
-  background-repeat: no-repeat;
-  width: 166px;
-  height: 40px;
-  display: inline-block;
-}
-
-#swiperMedia {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 272px;
-  width: 952px;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
-#slidebut {
-  height: 40px;
-  width: 166px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  color: white;
-}
+  position: relative;
 
-#videoSlide {
+  .section {
+    position: absolute;
+    top: 100%;
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+  }
 
-display: grid;
-grid-template-columns: 312px 312px 312px;
-height: 272px;
-}
+  #main {
+    background: url(/assets/images/Islam/bg-desktop-toussaint.6.jpg);
+    background-size: cover;
+  }
 
+  #nintendo {
+    background: url(/assets/images/Islam/bg-intro-desktop.6.jpg);
+    background-size: cover;
+  }
 
+  #open_world {
+    background: url(/assets/images/Islam/bg-openworld.6.jpg);
+    background-size: cover;
+  }
 
-#screenSlide {
-  display: grid;
-  grid-template-columns: 312px 312px 312px;
-  height: 272px;
-}
-#wallpaperSlide {
-  display: grid;
-  grid-template-columns: 312px 312px 312px;
-  height: 272px;
-}
-#cont {
-  width: 312px;
-  height: 256px;
-  margin: 4px;
-  background-color: rgba(0,0,0,.6);
+  #monster_hunter {
+    background: url(/assets/images/Islam/bg-monsterhunter.6.jpg);
+    background-size: cover;
+  }
 
+  #story {
+    background: url(/assets/images/Islam/bg-story.6.jpg);
+    background-size: cover;
+  }
 
-}
-#inVid {
-  width: 256px;
-  margin: 8px;
-}
-#slideImg {
-  width: 296px;
-  height: 166px;
-}
-#spanes {
-  display: inline-block;
-  font-size: 24px;
-  color: #fff;
-  line-height: 1.083;
-  text-align: left;
-  padding-top: 8px;
+  #buy_the_game {
+    background: url(/assets/images/Islam/bg-buy.6.jpg);
+    background-size: cover;
+  }
+
+  #news {
+    background: url(/assets/images/Islam/bg-news.6.jpg);
+    background-size: cover;
+  }
+
+  #world_map {
+    background: url(/assets/images/Islam/bg-map.6.jpg);
+    background-size: cover;
+  }
+
+  #media {
+    background: url(/assets/images/Islam/bg-media.6.jpg);
+    background-size: cover;
+
+    .moreBg {
+      background: url(/assets/images/Islam/apla-media.6.png);
+      background-size: cover;
+      height: 100%;
+
+      #headlineMedia {
+        padding-top: 122px;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        margin: 0;
+        cursor: default;
+      }
+
+      #divider {
+        background: url(/assets/images/Islam/line.png) no-repeat;
+        height: 12px;
+        background-position-x: 50%;
+        margin-top: 5px;
+      }
+
+      #sliderMedia {
+        display: flex;
+        justify-content: center;
+
+        .Buttons {
+          width: 166px;
+          font-size: 20px;
+          color: #fff;
+          line-height: 40px;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        #videoButton {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
+
+        }
+
+        #wallpaperButton {
+          background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
+        }
+
+        #screenshotButton {
+          background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
+        }
+      }
+
+      #hiddenSlide {
+        height: 256px;
+        overflow: hidden;
+
+        #slide {
+          width: 952px;
+          height: 256px;
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-column-gap: 5px;
+          justify-self: center;
+          margin-left: 120px;
+          transition: all 1s;
+
+          .imagesCont {
+            width: 952px;
+            height: 256px;
+            display: grid;
+            grid-template-columns: 312px 312px 312px;
+            grid-column-gap: 7px;
+            margin: 0;
+            padding-bottom: 10px;
+
+            #mediaSlideText {
+              color: white;
+              font-size: 24px;
+            }
+
+            .Image {
+
+              width: 296px;
+              padding: 7px;
+            }
+
+            .bgOfSlide {
+              background-color: #00000099;
+              height: 256px;
+              width: 312px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
