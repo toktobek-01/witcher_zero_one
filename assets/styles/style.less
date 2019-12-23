@@ -1,28 +1,35 @@
-body, h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 @font-face {
   font-family: PFDinTextCondPro;
-  src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff2) format("woff2"),url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal
 }
 
 @font-face {
   font-family: PFDinTextCondPro;
-  src: url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff2) format("woff2"),url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/PFDinTextCondPro-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal
 }
 
 @font-face {
   font-family: PFDinTextCondPro;
-  src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff2) format("woff2"),url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff) format("woff");
   font-weight: 400;
   font-style: italic
 }
@@ -36,27 +43,217 @@ li {
 
 @font-face {
   font-family: HalisGR-Light;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff2) format("woff2"),url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff) format("woff");
   font-weight: 300;
   font-style: normal
 }
 
 @font-face {
   font-family: HalisGR;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"),url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal
 }
 
 @font-face {
   font-family: HalisGR;
-  src: url(https://thewitcher.com/fonts/310E27_B_0.woff2) format("woff2"),url(https://thewitcher.com/fonts/310E27_B_0.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/310E27_B_0.woff2) format("woff2"), url(https://thewitcher.com/fonts/310E27_B_0.woff) format("woff");
   font-weight: 400
 }
 
 @font-face {
   font-family: HalisGR-Bold;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"),url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2) format("woff2"), url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal
 }
+
+body {
+  margin: 0;
+}
+
+#main {
+  background: url(../images/main/bg-desktop-toussaint.6.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  height: calc(100vh + 71px);
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: -71px;
+}
+
+#container {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc(50% - 20px) calc(50% + 20px);
+}
+
+h2 {
+  color: #dfba4f;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, .7);
+  position: relative;
+  font-family: 'PFDinTextCondPro-Regular', sans-serif;
+  font-size: 35px;
+  padding-top: 220px;
+  padding-left: 120px;
+  letter-spacing: 2px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.logo {
+  height: 165px;
+  width: 300px;
+  padding-top: 97px;
+  padding-left: 120px;
+}
+
+#video1 {
+  margin-top: 10px;
+  background: url(../images/main/console-lite.6.png) no-repeat;
+  height: 280px;
+  width: 530px;
+  background-size: 100%;
+
+  #videoIn {
+    background: url(../images/main/poster.6.jpg) no-repeat;
+    padding-left: 100px;
+    position: relative;
+    left: 100px;
+    top: 62px;
+    background-size: cover;
+    height: 135px;
+    width: 137px;
+    z-index: 4;
+
+    .video__play {
+      background-position: center;
+      position: relative;
+      top: 40px;
+      width: 55px;
+      height: 55px;
+      background-color: rgba(0, 0, 0, .8);
+      display: flex;
+      transform: rotate(45deg);
+      border: 1px solid #dfba4f;
+
+    }
+  }
+}
+
+.buy-now {
+  font-family: 'PFDinTextCondPro-Regular', sans-serif, ;
+  letter-spacing: 1px;
+  font-size: 23px;
+  color: black;
+  z-index: 5;
+  background: url(../images/main/button-buy.svg) no-repeat;
+  display: block;
+  height: 40px;
+  width: 300px;
+  margin-top: 110px;
+  margin-left: 120px;
+  text-align: center;
+  text-shadow: -1px -1px 0 #c29a36;
+  text-decoration: none;
+  padding-top: 15px;
+  font-weight: 1000;
+}
+
+.play {
+  position: relative;
+  height: 26px;
+  width: 22px;
+  transform: rotate(-45deg);
+  top: 11px;
+  left: 18px;
+}
+
+nav {
+  position: absolute;
+  margin-left: 1280px;
+  height: 360px;
+  width: 40px;
+}
+
+.menu {
+  margin-top: 20px;
+  margin-left: 1260px;
+  z-index: 100;
+}
+
+.menu-coming {
+  z-index: 5;
+}
+
+#imgGold {
+  margin-top: 30px;
+  margin-left: -35px;
+  z-index: 5;
+  height: auto;
+  width: auto;
+}
+
+#menuText {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 25px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+.but {
+  position: relative;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  outline: 1px solid white;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  ;
+  background-color: rgba(0, 0, 0, .6);
+  transform: rotate(45deg);
+  cursor: pointer
+}
+
+.but:hover {
+  background: white;
+}
+
+.butGold {
+  position: relative;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  outline: 1px solid #dfba4f;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .6);
+  transform: rotate(45deg);
+  cursor: pointer
+}
+
+.butGold:hover {
+  background: #dfba4f;
+}
+p {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: 'PFDinTextCondPro-Regular', sans-serif;
+  color: white;
+  display: none;
+  position: fixed;
+  right: 105px;
+  padding-top: 18.5px;
+ 
+}
+#menuText:hover {
+  p {
+    display: grid;
+  }
+}
+
