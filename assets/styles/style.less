@@ -3,7 +3,6 @@ body {
   font-family: 'PFDinTextCondPro-Regular', Arial sans-serif;
 
   #overlay {
-    position: fixed;
     z-index: 1;
 
     .angles {
@@ -165,6 +164,7 @@ body {
       z-index: 1;
     }
   }
+
   #logo {
     width: 1px;
     z-index: 1;
@@ -174,7 +174,7 @@ body {
     display: flex;
     justify-content: center;
   }
-  
+
   #logoIMG {
     width: 200px;
     display: none;
@@ -308,36 +308,38 @@ body {
           cursor: pointer;
         }
 
+
         #videoButton {
           background: url(/assets/images/Islam/media\ button.png) no-repeat;
-
         }
 
         #wallpaperButton {
           background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
         }
 
+        #wallpaperButton:hover {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
+        }
+
         #screenshotButton {
           background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
+        }
+
+        #screenshotButton:hover {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
         }
       }
 
       #hiddenSlide {
-        height: 256px;
         overflow: hidden;
 
         #slide {
           width: 952px;
           height: 256px;
-          display: grid;
-          grid-template-rows: 1fr 1fr 1fr;
-          grid-column-gap: 5px;
-          justify-self: center;
           margin-left: 120px;
           transition: all 1s;
 
           .imagesCont {
-            width: 952px;
             height: 256px;
             display: grid;
             grid-template-columns: 312px 312px 312px;
@@ -358,8 +360,6 @@ body {
 
             .bgOfSlide {
               background-color: #00000099;
-              height: 256px;
-              width: 312px;
             }
           }
         }
