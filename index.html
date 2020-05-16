@@ -1,114 +1,150 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="./js/main.js"></script>
-    <script
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.10.3/less.min.js"
-    ></script>
-    <link
-      rel="stylesheet/less"
-      type="text/css"
-      href="./assets/styles/style.less"
-    />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/main.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.10.3/less.min.js"></script>
+  <link rel="stylesheet/less" type="text/css" href="./assets/styles/style.less">
+  <title>Document</title>
+</head>
 
-  <body>
-    <main>
-      <nav id="menu">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+<body>
+  
+  <div id="overlay" class="goldLine">
+    <div class="angles" id="topLeft"></div>
+    <div class="angles" id="topRight"></div>
+    <div class="angles" id="bottomLeft"></div>
+    <div class="angles" id="bottomRight"></div>
+    <div class="lines" id="topLeftLine"></div>
+    <div class="lines" id="topRightLine"></div>
+    <div class="lines" id="leftLine"></div>
+    <div class="lines" id="rightLine"></div>
+    <div class="lines" id="bottomLeftLine"></div>
+    <div class="lines" id="bottomRightLine"></div>
+    <div id="logo"><img id="logoIMG" src="" alt=""></div>
+    <div id="bottomAlso">
+      <div id="mainAlso"><p id="mainBottomAlso">Also available on PC, PS4 and Xbox One</p></div>
+    </div>
+    <div id="sliderButton">
+      <img id="SliderDown" onclick="scrollDown()" src="assets/images/Islam/scrdwn.png" alt="">
+    </div>
+  </div>
+
+  <article id="section-holder" onscroll="onScroll()">
+
+    <section class="section" style="top: 0" id="main"></section>
+    <section class="section" id="nintendo"></section>
+    <section class="section" id="open_world"></section>
+    <section class="section" id="monster_hunter"></section>
+    <section class="section" id="story"></section>
+    <section class="section" id="buy_the_game"></section>
+    <section class="section" id="news">
+      <div class="container">
+        <h2>NEWS</h2>
+
+        <div class="boxes">
+          <div class="box">
+              <a href="https://thewitcher.com/en/news/31027/black-friday-weekend-sale" target="_blank">
+            <img
+              src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1575032125_5de1153e7f9337.78606958.jpg"
+              width="296"
+              height="166"
+              alt=""
+            />
+          </a>
+            <h2>Black Friday Weekend Sale</h2>
+            <h3>10 December 2019</h3>
+          </div>
+          <div class="box">
+              <a href="https://thewitcher.com/en/news/30895/the-witcher-3-wild-hunt-coming-to-xbox-game-pass" target="_blank">
+            <img
+              src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1573747338_5dcd7a8b3d59a7.29606717.jpg"
+              width="296"
+              height="166"
+              alt=""
+            />
+          </a>
+            <h2>
+              The Witcher 3: Wild Hunt coming
+              <br />
+              to Xbox Game Pass!
+            </h2>
+            <h3>10 December 2019</h3>
+          </div>
+          <div class="box">
+            <a href="https://thewitcher.com/en/news/30577/win-a-switch-witcheronthego-contest" target="_blank">
+            <img
+              src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1571246746_5da7529ae438d3.09291149.jpg"
+              width="296"
+              height="166"
+              alt=""
+            />
+          </a>
+            <h2>
+              Win a Switch — Witcher On
+              <br />
+              The Go Contest!
+            </h2>
+            <h3>10 December 2019</h3>
+          </div>
+        <div class="see_more">
+        <a href="https://thewitcher.com/en/news" target="_blank">SEE MORE NEWS>></a>
+      </div>
+    </section>
+
+    <section class="section" id="world_map">
+      <div class="world_map">
+        <h2>INTERACTIVE WORLD MAP</h2>
+      </div>
+      <div class="btn-view">
+         <a href="https://thewitcher.com/en/map/" target="_blank"><img src="./assets/images/news/btn-view.png" alt=""/></a>
+        
+      </div>
+    </section>
+    <section class="section" id="media">
+      <div class="moreBg">
+        <h2 id="headlineMedia">MEDIA</h2>
+        <div id="divider"></div>
+        <ul id="sliderMedia">
+          <li onclick="mediaSlide('video')" class="Buttons" id="videoButton">VIDEOS</li>
+          <li onclick="mediaSlide('wallpaper')" class="Buttons" id="wallpaperButton">WALLPAPERS</li>
+          <li onclick="mediaSlide('screenshote')" class="Buttons" id="screenshotButton">SCREENSHOTS</li>
         </ul>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-      <article>
-        <div id="ovelay"></div>
-
-        <section id="main"></section>
-        <section id="nintendo"></section>
-        <section id="open_world"></section>
-        <section id="monster_hunter"></section>
-        <section id="story"></section>
-        <section id="buy_the_game"></section>
-
-        <section id="news">
-          <div class="container">
-            <h2>NEWS</h2>
-
-            <div class="boxes">
-              <div class="box">
-                  <a href="https://thewitcher.com/en/news/31027/black-friday-weekend-sale" target="_blank">
-                <img
-                  src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1575032125_5de1153e7f9337.78606958.jpg"
-                  width="296"
-                  height="166"
-                  alt=""
-                />
-              </a>
-                <h2>Black Friday Weekend Sale</h2>
-                <h3>10 December 2019</h3>
-              </div>
-              <div class="box">
-                  <a href="https://thewitcher.com/en/news/30895/the-witcher-3-wild-hunt-coming-to-xbox-game-pass" target="_blank">
-                <img
-                  src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1573747338_5dcd7a8b3d59a7.29606717.jpg"
-                  width="296"
-                  height="166"
-                  alt=""
-                />
-              </a>
-                <h2>
-                  The Witcher 3: Wild Hunt coming
-                  <br />
-                  to Xbox Game Pass!
-                </h2>
-                <h3>10 December 2019</h3>
-              </div>
-              <div class="box">
-                <a href="https://thewitcher.com/en/news/30577/win-a-switch-witcheronthego-contest" target="_blank">
-                <img
-                  src="https://static.cdprojektred.com/thewitcher.com/news/witcher3/big/thewitcher.com_en_1571246746_5da7529ae438d3.09291149.jpg"
-                  width="296"
-                  height="166"
-                  alt=""
-                />
-              </a>
-                <h2>
-                  Win a Switch — Witcher On
-                  <br />
-                  The Go Contest!
-                </h2>
-                <h3>10 December 2019</h3>
-              </div>
-            <div class="see_more">
-            <a href="https://thewitcher.com/en/news" target="_blank">SEE MORE NEWS>></a>
+        <div id="hiddenSlide">
+          <div id="slide">
+            <ul class="imagesCont">
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="firstVideoIMG" src="/assets/images/Islam/explansion.jpg" alt="">
+                <span id="mediaSlideText">Witcher 3: Wild Hunt - Blood and Wine teaser trailer</span></li>
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="secondVideoIMG" src="/assets/images/Islam/starik.jpg" alt="">
+                <span id="mediaSlideText">The Witcher 3: Wild Hunt - Hearts of Stone (Expansion Trailer)</span></li>
+              <li class="videoIMG bgOfSlide">
+                <img class="Image" id="thirdVideoIMG" src="/assets/images/Islam/gage.jpg" alt="">
+                <span id="mediaSlideText">The Witcher 3: Wild Hunt - RAGE &amp; STEEL</span></li>
+            </ul>
+            <ul class="imagesCont">
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="firstWallpaperIMG" src="assets/images/Islam/wallpaper1.jpg" alt=""></li>
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="secondWallpaperIMG" src="assets/images/Islam/wallpaper2.jpg" alt=""></li>
+              <li class="wallpaperIMG bgOfSlide">
+                <img class="Image" id="thirdWallpaperIMG" src="assets/images/Islam/wallpaper3.jpg" alt=""></li>
+            </ul>
+            <ul class="imagesCont">
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="firstScreenshoteIMG" src="assets/images/Islam/screenshote1.jpg" alt=""></li>
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="secondScreenshoteIMG" src="assets/images/Islam/screenshote2.jpg" alt=""></li>
+              <li class="screenshotIMG bgOfSlide">
+                <img class="Image" id="thirdScreenshoteIMG" src="assets/images/Islam/screenshote3.jpg" alt=""></li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+  </article>
+</body>
 
-        <section id="world_map">
-          <div class="world_map">
-            <h2>INTERACTIVE WORLD MAP</h2>
-          </div>
-          <div class="btn-view">
-             <a href="https://thewitcher.com/en/map/" target="_blank"><img src="./assets/images/news/btn-view.png" alt=""/></a>
-            
-          </div>
-        </section>
-
-        <section id="media"></section>
-      </article>
-    </main>
-  </body>
 </html>

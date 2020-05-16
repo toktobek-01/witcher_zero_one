@@ -9,12 +9,14 @@ p {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 @font-face {
   font-family: PFDinTextCondPro;
-  src: url(../fonts/hinted-PFDinTextCondPro-Regular.woff2)
-      format("woff2"),
-    url(../fonts/hinted-PFDinTextCondPro-Regular.woff)
-      format("woff");
+  src: url(../fonts/hinted-PFDinTextCondPro-Regular.woff2) format("woff2"),
+    url(../fonts/hinted-PFDinTextCondPro-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -28,10 +30,8 @@ p {
 
 @font-face {
   font-family: PFDinTextCondPro;
-  src: url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff2)
-      format("woff2"),
-    url(https://thewitcher.com/fonts/hinted-PFDinTextCondPro-Italic.woff)
-      format("woff");
+  src: url(../fonts/hinted-PFDinTextCondPro-Italic.woff2) format("woff2"),
+    url(../fonts/hinted-PFDinTextCondPro-Italic.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -45,40 +45,248 @@ p {
 
 @font-face {
   font-family: HalisGR-Light;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff2)
-      format("woff2"),
-    url(https://thewitcher.com/fonts/hinted-HalisGR-Light.woff) format("woff");
+  src: url(../fonts//hinted-HalisGR-Light.woff2) format("woff2"),
+    url(../fonts/hinted-HalisGR-Light.woff) format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: HalisGR;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2)
-      format("woff2"),
-    url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+  src: url(../fonts/hinted-HalisGR-Bold.woff2) format("woff2"),
+    url(../fonts/hinted-HalisGR-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: HalisGR;
-  src: url(https://thewitcher.com/fonts/310E27_B_0.woff2) format("woff2"),
-    url(https://thewitcher.com/fonts/310E27_B_0.woff) format("woff");
+  src: url(../fonts/310E27_B_0.woff2) format("woff2"),
+    url(../fonts/310E27_B_0.woff) format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: HalisGR-Bold;
-  src: url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff2)
-      format("woff2"),
-    url(https://thewitcher.com/fonts/hinted-HalisGR-Bold.woff) format("woff");
+  src: url(../fonts/hinted-HalisGR-Bold.woff2) format("woff2"),
+    url(../fonts/hinted-HalisGR-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
-li {
-  list-style: none;
+body {
+  margin: 0;
+  font-family: 'PFDinTextCondPro-Regular', Arial sans-serif;
+
+  #overlay {
+    z-index: 1;
+
+    .angles {
+      height: 54px;
+      width: 54px;
+      z-index: 1;
+    }
+
+    #topLeftLine {
+      height: 1px;
+      position: fixed;
+      top: 40px;
+      left: 70px;
+      width: calc(50% - 70px);
+      z-index: 1;
+    }
+
+    #topRightLine {
+      height: 1px;
+      position: fixed;
+      top: 40px;
+      width: calc(50% - 70px);
+      right: 70px;
+    }
+
+    #bottomRightLine {
+      height: 1px;
+      position: fixed;
+      bottom: 40px;
+      right: 70px;
+      width: calc(50% - 70px);
+    }
+
+    #bottomLeftLine {
+      height: 1px;
+      position: fixed;
+      bottom: 40px;
+      left: 70px;
+      width: calc(50% - 70px);
+    }
+
+    #leftLine {
+      position: fixed;
+      width: 1px;
+      left: 40px;
+      top: 70px;
+      height: calc(100% - 140px);
+    }
+
+    #rightLine {
+      position: fixed;
+      width: 1px;
+      right: 40px;
+      top: 70px;
+      height: calc(100% - 140px);
+    }
+
+    #sliderButton {
+      position: fixed;
+      width: 1px;
+      bottom: 6px;
+      left: calc(50% - 1px);
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .goldLine {
+    .lines {
+      background-color: #b19042;
+      opacity: .35;
+      z-index: 1;
+    }
+  }
+
+  .silverLine {
+    .lines {
+      background-color: #b3bac0;
+      opacity: .35;
+      z-index: 1;
+    }
+  }
+
+  .silverLine {
+    #topLeft {
+      background: url(/assets/images/Islam/11.png);
+      position: fixed;
+      top: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #topRight {
+      background: url(/assets/images/Islam/12.png);
+      position: fixed;
+      top: 13px;
+      right: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #bottomLeft {
+      background: url(/assets/images/Islam/13.png);
+      position: fixed;
+      bottom: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .silverLine {
+    #bottomRight {
+      background: url(/assets/images/Islam/14.png);
+      position: fixed;
+      bottom: 13px;
+      right: 13px;
+      margin: 0;
+    }
+  }
+
+  .goldLine {
+    #topLeft {
+      background: url(/assets/images/Islam/top-left.6.png);
+      position: fixed;
+      top: 13px;
+      left: 13px;
+      margin: 0;
+    }
+  }
+
+  .goldLine {
+    #topRight {
+      background: url(/assets/images/Islam/top-right.6.png);
+      position: fixed;
+      top: 13px;
+      right: 13px;
+    }
+  }
+
+  .goldLine {
+    #bottomLeft {
+      background: url(/assets/images/Islam/bottom-left.6.png);
+      position: fixed;
+      bottom: 13px;
+      left: 13px;
+    }
+  }
+
+  .goldLine {
+    #bottomRight {
+      background: url(/assets/images/Islam/bottom-right.6.png);
+      position: fixed;
+      bottom: 13px;
+      right: 13px;
+      z-index: 1;
+    }
+  }
+
+  #logo {
+    width: 1px;
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logoIMG {
+    width: 200px;
+    display: none;
+  }
+
+  #bottomAlso {
+    position: fixed;
+    bottom: 22px;
+    left: calc(50% - 180px);
+    height: 36px;
+    width: 360px;
+    z-index: 1;
+    background-color: #b19042;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+    cursor: none;
+
+    #mainAlso {
+      width: 357px;
+      height: 34px;
+      position: fixed;
+      bottom: 23px;
+      left: calc(50% - 178px);
+      background-color: #2f2f2f;
+      clip-path: polygon(6.5% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #mainBottomAlso {
+        color: #dab145;
+        font-family: 'HalisGR', sans-serif;
+
+      }
+    }
+  }
 }
 
 #news {
@@ -141,44 +349,183 @@ li {
   }
 }
 
-  
-  #world_map {
-    background: url(..//images/news/bg-map.6.jpg) no-repeat;
-    display: grid;
-    height: 100vh;
+//
+// Media started
+//
+
+#section-holder {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  .section {
+    position: absolute;
+    top: 100%;
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+  }
+
+  #main {
+    background: url(/assets/images/Islam/bg-desktop-toussaint.6.jpg);
     background-size: cover;
-    position: relative;
-    z-index: 2;
-    justify-content: center;
-  }
-  .btn-view {
-    padding-left: 95px;
-    padding-bottom: 155px;
   }
 
-  .world_map {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 360px;
-    color: white;
-    font: 30px PFDinTextCondPro, Arial, sans-serif;
-
-    //.btn {
-    //    display: block;
-    //    background-position: 0 -168px;
-    //    width: 263px;
-    //    height: 91px;
-    //    margin: 0 auto;
-    //    width: 263px;
-    //    height: 91px;
-    //    background-color: transparent;
-    //
-    //    img {
-    //        justify-content: center;
-    //}
-    //
-    //
-    //}
+  #nintendo {
+    background: url(/assets/images/Islam/bg-intro-desktop.6.jpg);
+    background-size: cover;
   }
 
+  #open_world {
+    background: url(/assets/images/Islam/bg-openworld.6.jpg);
+    background-size: cover;
+  }
+
+  #monster_hunter {
+    background: url(/assets/images/Islam/bg-monsterhunter.6.jpg);
+    background-size: cover;
+  }
+
+  #story {
+    background: url(/assets/images/Islam/bg-story.6.jpg);
+    background-size: cover;
+  }
+
+  #buy_the_game {
+    background: url(/assets/images/Islam/bg-buy.6.jpg);
+    background-size: cover;
+  }
+
+  #news {
+    background: url(/assets/images/Islam/bg-news.6.jpg);
+    background-size: cover;
+  }
+
+  #world_map {
+    background: url(/assets/images/Islam/bg-map.6.jpg);
+    background-size: cover;
+  }
+
+  #media {
+    background: url(/assets/images/Islam/bg-media.6.jpg);
+    background-size: cover;
+
+    .moreBg {
+      background: url(/assets/images/Islam/apla-media.6.png);
+      background-size: cover;
+      height: 100%;
+
+      #headlineMedia {
+        padding-top: 122px;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        margin: 0;
+        cursor: default;
+      }
+
+      #divider {
+        background: url(/assets/images/Islam/line.png) no-repeat;
+        height: 12px;
+        background-position-x: 50%;
+        margin-top: 5px;
+      }
+
+      #sliderMedia {
+        display: flex;
+        justify-content: center;
+
+        .Buttons {
+          width: 166px;
+          font-size: 20px;
+          color: #fff;
+          line-height: 40px;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+
+        #videoButton {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
+        }
+
+        #wallpaperButton {
+          background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
+        }
+
+        #wallpaperButton:hover {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
+        }
+
+        #screenshotButton {
+          background: url(/assets/images/Islam/buttonMedia.png) no-repeat;
+        }
+
+        #screenshotButton:hover {
+          background: url(/assets/images/Islam/media\ button.png) no-repeat;
+        }
+      }
+
+      #hiddenSlide {
+        overflow: hidden;
+
+        #slide {
+          width: 952px;
+          height: 256px;
+          margin-left: 120px;
+          transition: all 1s;
+
+          .imagesCont {
+            height: 256px;
+            display: grid;
+            grid-template-columns: 312px 312px 312px;
+            grid-column-gap: 7px;
+            margin: 0;
+            padding-bottom: 10px;
+
+            #mediaSlideText {
+              color: white;
+              font-size: 24px;
+            }
+
+            .Image {
+
+              width: 296px;
+              padding: 7px;
+            }
+
+            .bgOfSlide {
+              background-color: #00000099;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#world_map {
+  background: url(..//images/news/bg-map.6.jpg) no-repeat;
+  display: grid;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+}
+
+.btn-view {
+  padding-left: 95px;
+  padding-bottom: 155px;
+}
+
+.world_map {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 360px;
+  color: white;
+  font: 30px PFDinTextCondPro, Arial, sans-serif;
+}
